@@ -1,0 +1,18 @@
+[
+  {
+    "username": "kurtoglu",
+    "password": "OWNER_ENTERS_REAL_PASSWORD_LOCALLY",
+    "role": "admin"
+  },
+  {
+    "username": "friend-example",
+    "password": "replace-this-password",
+    "role": "user"
+  },
+  {
+    "username": "former-friend",
+    "password": "replace-this-password",
+    "role": "user",
+    "active": false
+  }
+]

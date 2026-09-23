@@ -1,0 +1,9 @@
+dist
+coverage
+node_modules
+worker/node_modules
+worker/.wrangler
+flags
+package-lock.json
+worker/package-lock.json
+AGENTS.md

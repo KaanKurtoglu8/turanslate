@@ -1,0 +1,3 @@
+# Keep LF everywhere (Prettier and the Linux CI expect it), even on Windows checkouts.
+* text=auto eol=lf
+*.svg text eol=lf

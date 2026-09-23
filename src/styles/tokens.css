@@ -1,0 +1,48 @@
+/*
+ * Design tokens: the single source of colors for the app.
+ * Family backgrounds are deliberately pale annotations; turquoise stays the brand color.
+ */
+:root {
+  --bg: #ffffff;
+  --soft: #e8fafa;
+  --primary: #28bfc3;
+  --primary-strong: #15999d;
+  /* Darker turquoise for filled buttons and links so white/turquoise text meets WCAG AA. */
+  --primary-ink: #0f8286;
+  --primary-ink-hover: #0b6d70;
+  --text: #17393a;
+  --muted: #617879;
+  --native: #4a6566;
+  --border: #d9eeee;
+  --focus: #28bfc3;
+
+  --family-oghuz-bg: #fdecec;
+  --family-oghuz-border: #f2d2d2;
+  --family-karluk-bg: #f5ebdd;
+  --family-karluk-border: #e6d5bd;
+  --family-kipchak-bg: #eaf3ff;
+  --family-kipchak-border: #cfe0f6;
+  --family-common-bg: #eaf7ec;
+  --family-common-border: #cbe7d0;
+
+  --danger: #b3261e;
+  --danger-bg: #fdeceb;
+  --success: #1c7a3e;
+  --success-bg: #e6f5eb;
+  --pending: #7a5b00;
+  --pending-bg: #fff4d6;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 1px 2px rgb(23 57 58 / 6%), 0 4px 16px rgb(23 57 58 / 6%);
+  --shadow-pop: 0 8px 32px rgb(23 57 58 / 14%);
+
+  --font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-arabic:
+    'Noto Naskh Arabic', 'Noto Sans Arabic', 'UKIJ Tuz Tom', 'Segoe UI', 'Geeza Pro', Tahoma,
+    sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+}

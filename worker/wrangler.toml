@@ -1,0 +1,33 @@
+name = "turanslate-api"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# Non-secret configuration. Secrets (OPENAI_API_KEY, SESSION_SECRET) are set with
+# `npx wrangler secret put <NAME>` for production and `.dev.vars` locally.
+# Values in `.dev.vars` override these during `wrangler dev`.
+[vars]
+# Production CORS: the GitHub Pages origin only (no path, no trailing slash).
+ALLOWED_ORIGINS = "https://kaankurtoglu8.github.io"
+OPENAI_MODEL = "gpt-6-sol"
+# Leave empty for models that do not accept the `reasoning` parameter.
+OPENAI_REASONING_EFFORT = "low"
+OPENAI_MAX_OUTPUT_TOKENS = "4000"
+OPENAI_TIMEOUT_MS = "60000"
+# USD per 1M tokens for OPENAI_MODEL. Verify against current OpenAI pricing whenever the
+# model changes; leave either empty to disable cost estimates.
+OPENAI_INPUT_USD_PER_1M = "2.00"
+OPENAI_OUTPUT_USD_PER_1M = "10.00"
+SESSION_TTL_HOURS = "12"
+# The sentence length limit (400 characters) is MAX_INPUT_CHARS in shared/api.ts,
+# shared with the frontend so both always agree.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "turanslate"
+# Production D1 database (created with `npx wrangler d1 create turanslate`).
+database_id = "c8e0515c-a84d-4b7c-9245-ddc819f53db8"
+migrations_dir = "migrations"
+
+[observability]
+enabled = true

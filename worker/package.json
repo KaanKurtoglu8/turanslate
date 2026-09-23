@@ -1,0 +1,23 @@
+{
+  "name": "turanslate-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "typecheck": "tsc -p tsconfig.json",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "users:sync:local": "node scripts/seed-users.ts --local",
+    "users:sync:remote": "node scripts/seed-users.ts --remote",
+    "secrets:put": "node scripts/put-secrets.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260923.1",
+    "@types/node": "^26.6.2",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.136.3"
+  }
+}

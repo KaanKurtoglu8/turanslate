@@ -1,0 +1,18 @@
+# Copy to worker/.dev.vars for `wrangler dev`. .dev.vars is gitignored; never commit it.
+# Placeholder values only.
+
+# Secret: your OpenAI API key (server-side only; never put it in any VITE_* variable).
+OPENAI_API_KEY=replace-with-your-openai-api-key
+
+# Secret: long random string used to HMAC session tokens (e.g. `openssl rand -base64 48`).
+SESSION_SECRET=replace-with-a-long-random-string
+
+# Local development origins (Vite dev server and `vite preview`).
+ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173
+
+# Optional overrides of wrangler.toml [vars]:
+# OPENAI_MODEL=gpt-6-sol
+# OPENAI_REASONING_EFFORT=low
+# USD per 1M tokens (configuration, not secrets):
+# OPENAI_INPUT_USD_PER_1M=2.00
+# OPENAI_OUTPUT_USD_PER_1M=10.00
