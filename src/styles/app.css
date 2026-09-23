@@ -771,9 +771,14 @@ code {
   unicode-bidi: isolate;
 }
 
+/*
+ * Uyghur keeps dir="rtl" so words are ordered correctly, but the line is flush left so it
+ * lines up with the Latin line above instead of floating at the far right of the card.
+ */
 .lang-row__native[dir='rtl'] {
   font-family: var(--font-arabic);
   font-size: 1.0625rem;
+  text-align: left;
 }
 
 .shared-card {
